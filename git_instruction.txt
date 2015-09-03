@@ -1,0 +1,18 @@
+<p>git add 
+      <ul>
+	<li> git add -A stages All </li>
+	<li> git add . stages new and modified, without deleted </li>
+	<li> git add -u stages modified and deleted, without new </li>
+      </ul>
+      </p>
+
+      <p> git commit -m "original comment" </p>
+      <p> git push -u origin master </p>
+      <p> git reset "file" </p>
+
+      <p> You can undo git add before commit with </p>
+      <p> git reset "file" </p>
+      <p> which will remove it from the current index (the "about to be committed" list) without changing anything else. Note that git reset "file" is short for git reset HEAD "file".
+      </p>
+      <p> You can use git reset without any file name to undo all due changes. This can come in handy when there are too many files to be listed one by one in a reasonable amount of time.
+      </p>
