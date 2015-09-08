@@ -19,5 +19,34 @@
       <li> <a href="Compton.zip"> Compton.zip </a> </li>
       <li> <a href="EnergyLoss.zip"> EnergyLoss.zip </a> </li>
     </ul>
+
+    <h2> Geant4 EVN setup on Mainframe </h2>
+    <p> For simplicity, I used the following way. Feel free to tell me if you have a better way </p>
+    <ul>
+      <li> Open .bashrc file in your own home directory -- emacs .bashrc or vi .bashrc </li>
+      <li> Add the following line to the end of the file: 
+	<br> module load geant4/10.01.p02/gcc-5.1.0
+	<br> source /grid/software/geant4/10.01.p02/gcc-5.1.0/share/Geant4-10.1.2/geant4make/geant4make.sh 
+      </li>
+      <li> Save and exit .bashrc -- Ctrl x s; Ctrl x c (emacs) | :wq (vi) </li>
+      <li> Type the following command to make it run immediately -- source .bashrc </li>
+      <li> Done. The EVN setup will automatically be finished after you do above. You don't need to type anything when you login </li>
+    </ul>
+
+    <h2> How to run an example </h2>
+    <p> With the EVN setup above, there is no problem to run example B1 to B5. It's better to copy the example folder to your home directory by the command:
+      <br> &nbsp; &nbsp; &nbsp; &nbsp; cp -r /grid/software/geant4/10.01.p02/gcc-5.1.0/share/Geant4-10.1.2/examples/basic/ ~ 
+      <br> Now let's take B2 for an example. </p>
+    <ul>
+      <li> go to the directory of B2 by typing the following command-- cd /basic/B2 </li>
+      <li> compile the file by typing the command -- make </li>
+      <li> wait for the compiling </li>
+      <li> Since B2 folder actually has two examples, let us run the first one by typing -- cd B2a, then typing the command -- exampleB2a </li>
+      <li> wait and you will obtain a window pop up showing the structure of the detector </li>
+      <li> Geant4 will also enter the interaction mode. Type the following command after ''Idle>'' -- /run/beamOn 1 </li>
+      <li> Even 1 event is used, we still have to wait a long time for ''Idle>'' pop up again because we are using the login node for graphic calculation. </li>
+      <li> OK. Now you get the visual display of one particle passing through the detector. </li>
+    </ul>
+
   </body>
 </html>
