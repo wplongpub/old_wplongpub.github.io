@@ -4,7 +4,8 @@
     <title> bJetTagging </title>
   </head>
   <body>
-<!-- ---------------------->
+
+<!-- BTagCalib2015 -->
   <h1><a name="Recommendations_for_MC15_Based_A"></a> Recommendations for MC15 Based Analysis - 20.1 release </h1>
 <p>
 <h2><a name="Recommendation_March_2016"></a> Recommendation (March 2016) </h2>
@@ -49,6 +50,166 @@ CDI-related plots </p><ul>
 <p>
 These recommendations were made using the <a href="/twiki/bin/view/AtlasProtected/JetEtMiss" class="twikiLink">JetEtMiss</a> group's <strong>jet energy scale</strong> pre-recommendations, but are still valid for analyses using the <a href="/twiki/bin/view/AtlasProtected/JetEtMiss" class="twikiLink">JetEtMiss</a> 'Moriond' updates released in February 2016. They are also valid for both the pre-recommendations and Moriond update for the <strong>jet vertex  tagger</strong>, i.e. either selection requiring JVT&gt;0.64 for jets with pT0.59 for jets with pT&lt;60 GeV. The differences in b-tagging performance for these two selections are at the sub-percent level for b-jets, as shown in <a href="https://indico.cern.ch/event/504775/contribution/1/attachments/1237409/1817640/FlavorTaggingEfficiency_JVT_PeterBerta_2.3.2016.pdf" target="_blank">this talk<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a>.
 </p>
+  
+  <!-- bTaggingBenchmarks -->
+<h1><a name="b_tagging_Benchmarks_for_mc15c_s"></a> b-tagging Benchmarks for mc15c samples (2nd May 2016) </h1>
+<p>
+Based on a 13 <a href="/twiki/bin/view/AtlasProtected/TeV" class="twikiLink">TeV</a> t-tbar sample:
+</p><p>
+user.coccaro.mc15_13TeV.410000.PowhegPythiaEvtGen_FTAG2.e3698_s2608_s2183_r7725_r7676_p2596.BTAGNTUP_V48minim_Akt4EMTo/ 
+</p><p>
+using truth label from branch jet_LabDr_HadF.
+</p><p>
+</p><h2><a name="AntiKt4EMTopoJets"></a> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/AntiKt4EMTopoJets?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">AntiKt4EMTopoJets</a></span> </h2>
+Cuts applied on calo jets <ul>
+<li> pT &gt; 20 <a href="/twiki/bin/view/AtlasProtected/GeV" class="twikiLink">GeV</a>
+</li> <li> |eta| &lt; 2.5
+</li> <li> JVT&gt;0.59 for jets with pT &lt; 60 <a href="/twiki/bin/view/AtlasProtected/GeV" class="twikiLink">GeV</a> and |eta| &lt; 2.4
+</li> <li> removing electron jets using branch jet_aliveafterOR (set to false if there is a truth electron from W/Z within dR=0.3)
+</li></ul> 
+<p>
+</p><p>
+</p><h3><a name="MV2c20_tagger"></a> MV2c20 tagger </h3>
+<p>
+</p><p>
+</p><table id="table1" class="twikiTable" rules="all" border="1" cellpadding="0" cellspacing="0">
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th class="twikiTableCol0 twikiFirstCol" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=0;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">name</font></a> </th>
+			<th class="twikiTableCol1" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=1;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">weight cut</font></a> </th>
+			<th class="twikiTableCol2" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=2;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">b-jet efficiency [%]</font></a> </th>
+			<th class="twikiTableCol3" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=3;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">purity [%]</font></a> </th>
+			<th class="twikiTableCol4" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=4;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">c RR</font></a> </th>
+			<th class="twikiTableCol5" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=5;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">tau RR</font></a> </th>
+			<th class="twikiTableCol6 twikiLastCol" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=6;table=1;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">light RR</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_30 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.9963 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 29.96 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 99.95 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 1517.84 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 4297.89 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" bgcolor="#ffffff"> 44736.72 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_50 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#edf4f9"> 0.9594 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#edf4f9"> 50.04 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#edf4f9"> 99.63 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#edf4f9"> 113.72 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#edf4f9"> 567.65 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" bgcolor="#edf4f9"> 4447.20 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_60 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.8867 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 60.05 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 99.01 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 36.84 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 171.43 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" bgcolor="#ffffff"> 1163.61 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_70 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#edf4f9"> 0.7110 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#edf4f9"> 70.09 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#edf4f9"> 97.39 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#edf4f9"> 12.77 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#edf4f9"> 51.17 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#edf4f9"> 279.26 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_77 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.4803 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 77.00 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 94.99 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 6.57 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 21.43 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#ffffff"> 100.37 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_85 </td>
+			<td class="twikiTableCol1 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 0.0206 </td>
+			<td class="twikiTableCol2 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 84.93 </td>
+			<td class="twikiTableCol3 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 89.13 </td>
+			<td class="twikiTableCol4 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 3.25 </td>
+			<td class="twikiTableCol5 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 7.97 </td>
+			<td class="twikiTableCol6 twikiLastCol twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 27.26 </td>
+		</tr></tbody></table>
+<p>
+</p><p>
+</p><h3><a name="MV2c10_tagger_added_on_11th_May"></a> MV2c10 tagger (added on 11th May 2016) </h3>
+<p>
+</p><table id="table2" class="twikiTable" rules="all" border="1" cellpadding="0" cellspacing="0">
+		<tbody><tr class="twikiTableOdd twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<th class="twikiTableCol0 twikiFirstCol" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=0;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">name</font></a> </th>
+			<th class="twikiTableCol1" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=1;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">weight cut</font></a> </th>
+			<th class="twikiTableCol2" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=2;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">b-jet efficiency [%]</font></a> </th>
+			<th class="twikiTableCol3" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=3;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">purity [%]</font></a> </th>
+			<th class="twikiTableCol4" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=4;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">c RR</font></a> </th>
+			<th class="twikiTableCol5" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=5;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">tau RR</font></a> </th>
+			<th class="twikiTableCol6 twikiLastCol" valign="top" bgcolor="#687684"> <a rel="nofollow" href="/twiki/bin/view/AtlasProtected/BTaggingBenchmarks?sortcol=6;table=2;up=0#sorted_table" title="Sort by this column"><font color="#ffffff">light RR</font></a> </th>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_30 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.9977 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 29.99 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 99.95 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 1406.40 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 4891.95 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#ffffff"> 51290.94 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_50 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#edf4f9"> 0.9769 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#edf4f9"> 50.05 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#edf4f9"> 99.62 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#edf4f9"> 106.41 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#edf4f9"> 614.79 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#edf4f9"> 5701.28 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_60 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.9349 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 60.03 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 99.00 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 34.54 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 183.98 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#ffffff"> 1538.78 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_70 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#edf4f9"> 0.8244 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#edf4f9"> 69.97 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#edf4f9"> 97.46 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#edf4f9"> 12.17 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#edf4f9"> 54.72 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#edf4f9"> 381.32 </td>
+		</tr>
+		<tr class="twikiTableEven twikiTableRowdataBgSorted0 twikiTableRowdataBg0">
+			<td class="twikiTableCol0 twikiFirstCol" valign="top" align="right" bgcolor="#ffffff"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_77 </td>
+			<td class="twikiTableCol1" valign="top" align="right" bgcolor="#ffffff"> 0.6459 </td>
+			<td class="twikiTableCol2" valign="top" align="right" bgcolor="#ffffff"> 76.97 </td>
+			<td class="twikiTableCol3" valign="top" align="right" bgcolor="#ffffff"> 95.17 </td>
+			<td class="twikiTableCol4" valign="top" align="right" bgcolor="#ffffff"> 6.21 </td>
+			<td class="twikiTableCol5" valign="top" align="right" bgcolor="#ffffff"> 22.04 </td>
+			<td class="twikiTableCol6 twikiLastCol" valign="top" align="right" bgcolor="#ffffff"> 134.34 </td>
+		</tr>
+		<tr class="twikiTableOdd twikiTableRowdataBgSorted1 twikiTableRowdataBg1">
+			<td class="twikiTableCol0 twikiFirstCol twikiLast" valign="top" align="right" bgcolor="#edf4f9"> <span class="twikiNewLink"><a href="/twiki/bin/edit/AtlasProtected/FixedCutBEff?topicparent=AtlasProtected.BTaggingBenchmarks;nowysiwyg=1" rel="nofollow" title="this topic does not yet exist; you can create it.">FixedCutBEff</a></span>_85 </td>
+			<td class="twikiTableCol1 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 0.1758 </td>
+			<td class="twikiTableCol2 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 84.95 </td>
+			<td class="twikiTableCol3 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 89.66 </td>
+			<td class="twikiTableCol4 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 3.10 </td>
+			<td class="twikiTableCol5 twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 8.17 </td>
+			<td class="twikiTableCol6 twikiLastCol twikiLast" valign="top" align="right" bgcolor="#edf4f9"> 33.53 </td>
+		</tr></tbody></table>
+  
+  
+  
+  
+  
+  
   
   </body>
 </html>
