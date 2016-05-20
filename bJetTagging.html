@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title> bJetTagging </title>
+  </head>
+  <body>
+<!-- ---------------------->
+  <h1><a name="Recommendations_for_MC15_Based_A"></a> Recommendations for MC15 Based Analysis - 20.1 release </h1>
+<p>
+<h2><a name="Recommendation_March_2016"></a> Recommendation (March 2016) </h2>
+<p>
+Final recommendations for Moriond.
+</p><p>
+CDI file released and can be found: </p><ul>
+<li> in CVMFS under the xAODBTaggingEfficiency calibration area (March10_v1) - <a href="http://atlas.web.cern.ch/Atlas/GROUPS/DATABASE/GroupData/xAODBTaggingEfficiency/13TeV/" target="_blank">link<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a> - /cvmfs/atlas.cern.ch/repo/sw/database/GroupData/xAODBTaggingEfficiency
+</li></ul> 
+<p>
+Recommendations </p><ul>
+<li> analyses applying flavour tagging on R=0.2 track-jets or calibrations stored outside the default folders are encouraged to switch to these recommendations.
+</li> <li> analyses strongly dependent on the c-jet and light-jet uncertainties should not include these uncertainties when profiling. These uncertainties are still based on pre-recommendations and are therefore dominated by one nuisance parameter correlated across jet pT. Removing the leading c- and light-jet nuisance parameter when profiling can be achieved by evaluating the impact of +1 and -1 sigma variations onto the final analysis observable and by adding the uncertainty related to it directly to the final observable with an additional smearing term in the likelihood. If impractical, an alternative correlation model should be tested where the first c- and light-jet nuisance parameters are split in several jet pT bins (depending on the jet pT spectrum in the analysis) and left as uncorrelated. More information <a href="/twiki/bin/view/AtlasProtected/ProfilingChecksDraft" class="twikiLink">here</a>.
+</li></ul> 
+<p>
+What's new? </p><ul>
+<li> the high-pT extrapolation for the recommendations of the b-jet SF for the R=0.2 track-jets was missing and is added
+</li> <li> the MC/MC SFs for the b-jet SF for the R=0.2 track-jets are added
+</li> <li> the SF smoothing and NP reduction are added for all the non-default pre-recommendation folders
+</li> <li> default containers for the calorimeter jets <ul>
+<li> b-jet SF for the fixed-cut working points: ttbar di-lepton Tag&amp;Probe calibration in the 2j channel
+</li> <li> b-jet SF for the flat-efficiency working points: ttbar di-lepton PDF calibration in the 2j+3j channel
+</li> <li> c-jet SF: pre-recommendations with D*
+</li> <li> light-jet SF: pre-recommendations with negative tags
+</li></ul> 
+</li> <li> default containers for the R=0.2 track-jets <ul>
+<li> b-jet SF: for the fixed-cut working points: ttbar di-lepton PDF calibration in the 2j channel
+</li> <li> c-jet SF: pre-recommendations with D*
+</li> <li> light-jet SF: pre-recommendations with negative tags
+</li></ul> 
+</li> <li> default containers for the R=0.4 track-jets <ul>
+<li> b-jet SF: pre-recommendations with ttbar di-lepton PDF calibration
+</li> <li> c-jet SF: pre-recommendations with D*
+</li> <li> light-jet SF: pre-recommendations with negative tags
+</li></ul> 
+</li></ul> 
+<p>
+CDI-related plots </p><ul>
+<li> a set of plots showing the CDI scale factors is available <a href="http://coccaro.web.cern.ch/coccaro/Work/bTagging/CDI/build_1226/" target="_blank">here<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a>
+</li> <li> a set of plots showing the CDI efficiency maps used for MC/MC scale factors is available for <a href="https://pberta.web.cern.ch/pberta/FT/build-1226_10.3.2016/allSamples/AntiKt4EMTopoJets/MV2c20/" target="_blank">AntiKt4EMTopoJets<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a> and <a href="https://pberta.web.cern.ch/pberta/FT/build-1226_10.3.2016/allSamples/AntiKt2PV0TrackJets/MV2c20/" target="_blank">AntiKt2PV0TrackJets<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a>
+</li></ul> 
+<p>
+These recommendations were made using the <a href="/twiki/bin/view/AtlasProtected/JetEtMiss" class="twikiLink">JetEtMiss</a> group's <strong>jet energy scale</strong> pre-recommendations, but are still valid for analyses using the <a href="/twiki/bin/view/AtlasProtected/JetEtMiss" class="twikiLink">JetEtMiss</a> 'Moriond' updates released in February 2016. They are also valid for both the pre-recommendations and Moriond update for the <strong>jet vertex  tagger</strong>, i.e. either selection requiring JVT&gt;0.64 for jets with pT0.59 for jets with pT&lt;60 GeV. The differences in b-tagging performance for these two selections are at the sub-percent level for b-jets, as shown in <a href="https://indico.cern.ch/event/504775/contribution/1/attachments/1237409/1817640/FlavorTaggingEfficiency_JVT_PeterBerta_2.3.2016.pdf" target="_blank">this talk<img alt="" src="/twiki/pub/TWiki/TWikiDocGraphics/external-link.gif" height="12" width="13" border="0"></a>.
+</p>
+  
+  </body>
+</html>
